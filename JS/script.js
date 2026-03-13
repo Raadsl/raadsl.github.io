@@ -80,6 +80,11 @@ function toggleimg() {
       contentBars[i].style.backgroundColor = "#302c2c";
       contentBars[i].style.color = "#e4d9d9";
     }
+    let projectChips = document.getElementsByClassName("project-chip");
+    for (let i = 0; i < projectChips.length; i++) {
+      projectChips[i].style.backgroundColor = "#3e3d57";
+      projectChips[i].style.color = "#d4ecff";
+    }
     document.querySelector('.r').style.color = "#9b5de5";
     document.querySelector('.a').style.color = "#f15bb5";
     document.querySelector('.a2').style.color = "#00bbf9";
@@ -105,6 +110,11 @@ function toggleimg() {
     for (let i = 0; i < contentBars.length; i++) {
       contentBars[i].style.backgroundColor = "#F5F5F5";
       contentBars[i].style.color = "#333333";
+    }
+    let projectChips = document.getElementsByClassName("project-chip");
+    for (let i = 0; i < projectChips.length; i++) {
+      projectChips[i].style.backgroundColor = "#e4f4ff";
+      projectChips[i].style.color = "#0a5f95";
     }
     document.querySelector('.j').style.color = "#6600cc";
     document.querySelector('.o').style.color = "#cc0099";
@@ -167,26 +177,6 @@ window.onpointermove = (event) => {
   );
 };
 
-//modal
-document.addEventListener("DOMContentLoaded", function () {
-  const openModalBtn = document.getElementById("open-modal-btn");
-  const modal = document.getElementById("skills-modal");
-  const closeBtn = document.querySelector(".skills-close");
-  openModalBtn.addEventListener("click", () => {
-    modal.style.display = "block"; // Show modal when button is clicked
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none"; // Hide modal when close button is clicked
-  });
-
-  window.addEventListener("click", (event) => {
-    if (event.target == modal) {
-      modal.style.display = "none"; // Hide modal when user clicks outside of it
-    }
-  });
-});
-
 document.addEventListener("DOMContentLoaded", function() {
   var lazyBackgrounds = [].slice.call(document.querySelectorAll(".card__background"));
 
@@ -204,6 +194,32 @@ document.addEventListener("DOMContentLoaded", function() {
       lazyBackgroundObserver.observe(lazyBackground);
     });
   }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const revealItems = document.querySelectorAll(".reveal-on-scroll");
+  if (!revealItems.length) return;
+
+  if (!("IntersectionObserver" in window)) {
+    revealItems.forEach((item) => item.classList.add("is-visible"));
+    return;
+  }
+
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0.2,
+    }
+  );
+
+  revealItems.forEach((item) => revealObserver.observe(item));
 });
 
 let index = 0,interval2 = 1000;const rand = (min, max) =>Math.floor(Math.random() * (max - min + 1)) + min;const animate = star => {star.style.setProperty("--star-left", `${rand(-10, 100)}%`);star.style.setProperty("--star-top", `${rand(-40, 80)}%`);star.style.animation = "none";star.offsetHeight;star.style.animation = ""};for(const star of document.getElementsByClassName("magic-star")) {setTimeout(() => {animate(star);setInterval(() => animate(star), 1000);}, index++ * (interval2 / 3))} //cool effect

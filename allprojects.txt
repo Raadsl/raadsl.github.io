@@ -1,4 +1,9 @@
 All important projects:
+- https://we-boost.nl - custom wordpress theme & website
+- FactuurLoos - Custom invoice app
+- https://gamblecrossing.raadsel.dev/ - multiplayer economy & gamble website
+- https://github.com/Raadsl/word-imposter - word imposter app
+- https://github.com/Raadsl/BetterBangs - DuckDuckGo Bangs extension for other searchengines
 - https://curating.ai/
 - https://gennaro.ai
 - https://www.startingup.ai - updated

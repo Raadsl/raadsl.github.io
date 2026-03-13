@@ -48,7 +48,7 @@
         <div title=';-)' class="smile">:)</div>
       </div>
       <div class="container">
-        <noscript style='z-index: 99:'>
+        <noscript style='z-index: 99;'>
     <h1>Most of this site's functionality requires JavaScript. Please enable JavaScript to see the rest of the site..</h1>
         </noscript>
       <h2 data-value="Development" class='small outline'data-m="reveal-right" title="Development" data-m-delay="1.2" id='Jorik Development'>Development</h2>
@@ -66,182 +66,68 @@
   <div class="content">
     <div id="about">
       <h2 title="About me" data-aos="fade-right" class="middle sectiontitle">About Me</h2>
-      <div data-aos="fade-right" id='content-bar' class="content-bar">
-        <p><span class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik, also known as Raadsel." class='sky-blue'>Jorik</strong>!</span>
-        <span class='about-me-subtext'>
-          I am a <strong data-tooltip="I just develop things:)" class="text">Developer</strong>
-        </span>
+      <section data-aos="fade-right" class="content-bar about-card">
+        <p class="about-me-text">Hey, I'm <strong data-tooltip="I'm Jorik, also known as Raadsel." class="sky-blue">Jorik</strong> and I build things for the web.</p>
+        <p class="about-me-subtext">
+          I am a <strong data-tooltip="I just develop things:)" class="text">Developer</strong> based in
+          <span id="time" data-tooltip="So the timezone is GMT+, Amsterdam">the <span class="magic"><span class="magic-star"></span><span class="magic-text">Netherlands</span></span></span>.
+          I enjoy turning ideas into fast, useful fullstack products with clean design and practical UX.
         </p>
-        <p class='about-me-subtext'> 
-          I'm based in 
-          <span id='time' data-tooltip="So the timezone is GMT+, Amsterdam">the <span class="magic"><span class="magic-star"></span><span class="magic-text">Netherlands</span></span></span>. 
-          and I'm passionate about creating cool designs and developing Fullstack applications. If you have a project you want to realise, or any other questions, do not hesitate to contact me!
-        </p>
-        <hr />
-        <p>
-        <div class='buttons'>
-          <button data-tooltip='Hire me!' onclick='window.open("mailto:iraadsel+hire@gmail.com", "_blank")'>
+        <div class="buttons about-actions">
+          <button data-tooltip="Hire me!" onclick='window.open("mailto:iraadsel+hire@gmail.com", "_blank")'>
             <span> Hire me </span>
             <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
               <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
             </svg>
           </button>
-          <button data-tooltip="View my skillset" id='open-modal-btn'>
-            <span> Skillset </span>
-            <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
-            </svg>
-          </button>
-          <button data-tooltip="Buy me a coffee" onclick='window.open("https://www.buymeacoffee.com/raadsel", "_blank")'>
-            <span> Buy me a ☕️ </span>
-            <svg viewBox="-5 -5 110 110" preserveAspectRatio="none" aria-hidden="true">
-              <path d="M0,0 C0,0 100,0 100,0 C100,0 100,100 100,100 C100,100 0,100 0,100 C0,100 0,0 0,0"/>
-            </svg>
-          </button>
-        </p>
-      </div>
-      </div>
+        </div>
+      </section>
     </div>
-    <!-- Modal content -->
-  <div id="skills-modal" class="skills-modal">
-    <div class="skills-modal-content">
-      <span class="skills-close" style='z-index: 6;position: sticky;'>&times;</span>
-      <h3 class='skills-title' style='font-family: sans-serif;font-size:1.5rem;'>My Skills</h3>
-      <p class='skills-desc'>
-        This is a list of what I have learned and used across my programming career.
-      </p>
-      <div class='skills-scroll-content'>
-      <h3>Currently learning</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="For Minecraft plugins" class='skillslist'>Java</li>
-      </ul>
-      <h3>Programming Languages</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Python my beloved" class='skillslist'>Python</li>
-        <li data-tooltip="Javascript != Java" class='skillslist'>Javascript</li>
-        <ul>
-          <li data-tooltip="Node JS is an interpreter or running environment for a JavaScript programming language" class='skillslist'>NodeJS</li>
-          <li class='skillslist'>Deno</li>
-          <li data-tooltip="HTML,CSS,JS etc" class='skillslist'>Website markup languages</li>
-        </ul>
-        <li data-tooltip="Arduino is C++ but a bit different">Arduino</li>
-      </ul>
-      <h3>Languages</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="fluently" class='skillslist blur-list'>English</li>
-        <li data-tooltip='native' class='skillslist'>Dutch</li>
-        <li data-tooltip="Can make myself understandable" class='skillslist'>German</li>
-        <li data-tooltip="Still learning" class='skillslist'>Spanish (still learning)</li>
-      </ul>
-      <h3>Web Frameworks</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Python package" class='skillslist'>Flask</li>
-        <li data-tooltip="NodeJS package" class='skillslist'>Express.js</li>
-        <li data-tooltip="Python package" class='skillslist'>FastAPI</li>
-      </ul>
-      <h3>APIs</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="used for most of my things" class='skillslist'>REST</li>
-        <li data-tooltip="used for replit's API" class='skillslist'>GraphQL</li>
-      </ul>
-      <h3>Payment systems</h3>
-        <ul class='skillsUL'>
-          <li data-tooltip="Used in www.startingup.ai and www.presentationmaker.ai" class='skillslist'>Stripe</li>
-        </ul>
-      <h3>Databases</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Not used in a public project yet" class='skillslist'>Supabase</li>
-        <li data-tooltip="Not used in a public project yet" class='skillslist'>Mongodb</li>
-        <li data-tooltip="Not used in a public project yet" class='skillslist'>Fire-store</li>
-        <li data-tooltip="SQL" class='skillslist'>Postgresql</li>
-        <li data-tooltip="SQL" class='skillslist'>(My)SQL(ite)</li>
-      </ul>
-      <h3>Artificial Intelligence</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Generative Pre-training Transformer. and other OpenAI API's" class='skillslist'>All the GPT models, embedding and more.</li>
-        
-        <li data-tooltip="An image generator AI by openAI" class='skillslist'>DALL-E 2</li>
-        <li data-tooltip="Also an image generator AI" class='skillslist'>Stable Diffusion</li>
-      </ul>
-      <h3>Data Logging</h3>
-       <ul class='skillsUL'>
-         <li class='skillslist'>Datadog</li>
-         <li class='skillslist'>Discord Webhooks</li>
-         <li class='skillslist'>Slack Webhooks</li>
-       </ul>
-      <h3>Config Formats</h3>
-       <ul class='skillsUL'>
-         <li data-tooltip="JavaScript Object Notation" class='skillslist'>JSON</li>
-         <li data-tooltip="comma-separated values" class='skillslist'>CSV</li>
-         <li data-tooltip="yet another markup language" class='skillslist'>YAML</li>
-         <li data-tooltip="Tom's Obvious, Minimal Language" class='skillslist'>TOML</li>
-       </ul>
-      <h3>Tooling</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Git != Github" class='skillslist'>Git</li>
-        <li data-tooltip="NodeJS packages" class='skillslist'>NPM</li>
-        <li data-tooltip="Python packages " class='skillslist'>Pypi</li>
-        <li class='skillslist'>JSHint</li>
-        <li data-tooltip="hosting" class='skillslist'>Heroku</li>
-        <li class='skillslist'>Docker</li>
-        <li data-tooltip="Sort of HTML" class='skillslist'>Babel</li>
-        <li data-tooltip="For transferring data between client and server" class='skillslist'>SocketIO</li>
-      </ul>
-      <h3>Wire Formats</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="JavaScript Object Notation" class='skillslist'>JSON</li>
-        <li class='skillslist'>Form data</li>
-        <li data-tooltip="Extensible Markup Language"  class='skillslist'>XML</li>
-      </ul>
-      <h3>Styling</h3>
-      <ul class='skillsUL'>
-        <li data-tooltip="Cascading Style Sheets" class='skillslist'>CSS</li>
-        <li data-tooltip="Sassy Cascading Style Sheets" class='skillslist'>SCSS</li>
-        <li class='skillslist'>TailwindCSS</li>
-        <li class='skillslist'>Bootstrap</li>
-        <li class='skillslist'>vanilla-extract</li>
-      </ul>
-      </div>
-    </div>
-  </div>
   <br />
   <h2 title="My project page" data-aos="fade-right" class="middle">Featured Projects</h2>
-  <section data-aos="fade-right" class="hero-section content-bar" id='content-bar' style='padding: 5%;'>
-    <div class="card-grid">
-      <a data-aos="fade-right" rel='noreferrer' target='_blank' class="card" href="https://www.chatbusiness.ai">
-        <div class="card__background" data-src="/assets/project-chat.webp"></div>
-        <div class="card__content">
-          <p data-tooltip="This was a paid project that uses AI." class="card__category">Paid project &#x2022; AI</p>
-          <h3 title="Source code isn't public" class="card__heading">Chat-Business.ai</h3>
-        </div>
-      </a>
-      
-      <a data-aos="fade-up-right" rel='noreferrer' target='_blank' class="card" href="https://github.com/Raadsl/Logo-generator">
-        <div class="card__background" data-src="/assets/project-AIlogo.webp"></div>
-        <div class="card__content">
-          <p data-tooltip="This was a paid project that uses AI." class="card__category">Paid project &#x2022; AI</p>
-          <h3 title="Source code is public, just no public site" class="card__heading">Logo generator</h3>
-        </div>
-      </a>
-      
-      <a data-aos="fade-up-left" rel='noreferrer' target='_blank' class="card" href="https:/startingup.ai/">
-        <div class="card__background" data-src="/assets/startingupai.png"></div>
-        <div class="card__content">
-           <p data-tooltip="This was a paid project that uses AI. I made the underlying framework for it." class="card__category">Paid project &#x2022; AI</p>
-           <h3 title="Source code is not public" class="card__heading">Startingup.ai</h3>
-        </div>
-      </a>
-      
-      <a data-aos="fade-left" rel='noreferrer' target='_blank' class="card" href="https://replit.com/@Raadsel/Your-Followers-Followers?v=1">
-        <div class="card__background" data-src="/assets/project-YFF.webp"></div>
-        <div class="card__content">
-          <p data-tooltip="This is a personal project I made for fun that uses Replit's GraphQL API." class="card__category">Personal &#x2022; GraphQL</p>
-          <h3 title="Source code is public" class="card__heading">Your Followers Followers</h3>
-        </div>
-      </a>
-    </div>
-   
-</section>
+  <p class="projects-intro">A selection of products, experiments, and client work I shipped.</p>
+  <section class="projects-list" id="projects">
+    <a rel="noreferrer" target="_blank" class="project-card content-bar reveal-on-scroll reveal-left" href="https://we-boost.nl">
+      <img class="project-image" src="assets/WB-logo-los.png" alt="Screenshot of WeBoost website" loading="lazy">
+      <div class="project-content">
+        <span class="project-chip">Client website</span>
+        <h3 class="project-title">WeBoost</h3>
+        <p class="project-copy">Custom WordPress theme and website implementation tailored for WeBoost.</p>
+      </div>
+    </a>
+    <a rel="noreferrer" target="_blank" class="project-card content-bar reveal-on-scroll reveal-left" href="https://github.com/Raadsl/Logo-generator">
+      <img class="project-image" src="assets/project-AIlogo.webp" alt="Preview image of Logo Generator" loading="lazy">
+      <div class="project-content">
+        <span class="project-chip">Open source - AI</span>
+        <h3 class="project-title">Logo Generator</h3>
+        <p class="project-copy">Automated logo generation workflow with prompt-driven style control and simple exports.</p>
+      </div>
+    </a>
+    <a rel="noreferrer" target="_blank" class="project-card content-bar reveal-on-scroll reveal-right" href="https://github.com/Raadsl/BetterBangs">
+      <img class="project-image" src="assets/raadsel.svg" alt="Preview icon for BetterBangs" loading="lazy">
+      <div class="project-content">
+        <span class="project-chip">Browser extension</span>
+        <h3 class="project-title">BetterBangs</h3>
+        <p class="project-copy">Extension that brings DuckDuckGo bangs to other search engines across major browsers.</p>
+      </div>
+    </a>
+    <a rel="noreferrer" target="_blank" class="project-card content-bar reveal-on-scroll reveal-left" href="https://www.startingup.ai">
+      <img class="project-image" src="assets/startingupai.png" alt="Screenshot of Startingup.ai" loading="lazy">
+      <div class="project-content">
+        <span class="project-chip">Paid project - SaaS</span>
+        <h3 class="project-title">Startingup.ai</h3>
+        <p class="project-copy">Created 100+ AI tools for startups and an agent that can use multiple tools.</p>
+      </div>
+    </a>
+    <a rel="noreferrer" target="_blank" class="project-card content-bar reveal-on-scroll reveal-right" href="https://gamblecrossing.raadsel.dev/">
+      <img class="project-image" src="assets/project-chat.webp" alt="Preview visual for GambleCrossing" loading="lazy">
+      <div class="project-content">
+        <span class="project-chip">Multiplayer web app</span>
+        <h3 class="project-title">GambleCrossing</h3>
+        <p class="project-copy">Economy and gambling web game with multiplayer interactions, stats, and progression loops.</p>
+      </div>
+    </a>
+  </section>
   <div style="padding: 6vw 0 0 0"></div>
     <div data-aos="fade-up" id='contact'>
       <center>
