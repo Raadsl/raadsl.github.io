@@ -557,12 +557,10 @@ img.bouncecss:active {
 
 .project-card:nth-child(odd) {
   margin-right: auto;
-  border-left: 4px solid #1d9bf0;
 }
 
 .project-card:nth-child(even) {
   margin-left: auto;
-  border-right: 4px solid #11a36a;
 }
 
 .project-card:nth-child(even) {
@@ -799,8 +797,7 @@ button:active > svg > path {
 
   .project-card:nth-child(odd),
   .project-card:nth-child(even) {
-    border-left: 4px solid #1d9bf0;
-    border-right: 0;
+    flex-direction: column;
     margin-left: 0;
     margin-right: 0;
   }
